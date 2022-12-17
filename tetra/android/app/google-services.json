@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "395797911887",
+    "firebase_url": "https://tetra-6c0ee-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "tetra-6c0ee",
+    "storage_bucket": "tetra-6c0ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:395797911887:android:60d20a401fdd04c16ccd3a",
+        "android_client_info": {
+          "package_name": "com.example.tetra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "395797911887-b9g9ue04jsuj7ean9kgt0orejoo7ckq3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCey1oIH5f710N_lC8BA3EGtv3KyH1BTrg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "395797911887-b9g9ue04jsuj7ean9kgt0orejoo7ckq3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
