@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:tetra/pages/homepage.dart';
-import 'package:tetra/pages/intro_screen.dart';
 import 'package:tetra/pages/register_page.dart';
-
-import 'home.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -108,7 +105,7 @@ class _LoginPageState extends State<LoginPage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Home(),
+                            builder: (context) => HomePage(),
                           ));
                     },
                     child: Container(
