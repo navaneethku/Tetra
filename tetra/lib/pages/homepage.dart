@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:tetra/pages/labreport.dart';
+import 'package:tetra/pages/medicine.dart';
+import 'package:tetra/pages/user_dashboard.dart';
 
-import 'labreport.dart';
+//import 'labreport.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -16,12 +19,25 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [Icon(Icons.person)],
+        actions: [
+          ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => UserDash(),
+                    ));
+              },
+              child: Icon(
+                Icons.person,
+                color: Colors.black,
+              ))
+        ],
       ),
       body: SafeArea(
         child: Container(
           child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Column(
                 children: [
@@ -59,9 +75,14 @@ class _HomePageState extends State<HomePage> {
                       ),
                       Text("Lab Report Analysis"),
                       TextButton(
-                        onPressed: () => LabReport(),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => GraphScreen()));
+                        },
                         child: Image.asset(
-                          "lib/Assets/link1.png",
+                          "lib/Assets/link2.png",
                           height: 50,
                         ),
                       )
@@ -73,8 +94,13 @@ class _HomePageState extends State<HomePage> {
                     ),
                     Text("Medicine Reminder"),
                     TextButton(
-                      onPressed: () => LabReport(),
-                      child: Image.asset("lib/Assets/link2.png", height: 50),
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Medicine()),
+                        );
+                      },
+                      child: Image.asset("lib/Assets/link1.png", height: 50),
                     )
                   ])
                 ],

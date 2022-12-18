@@ -9,21 +9,32 @@ class UserDash extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Center(
-          child: Container(
-              child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.asset(
-            "lib/Assets/dash1.jpeg",
-            fit: BoxFit.cover,
-          ),
-          Image.asset(
-            "lib/Assets/dash2.jpeg",
-            fit: BoxFit.cover,
-          ),
-        ],
-      ))),
+      body: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                "Good Morning",
+                style: TextStyle(fontSize: 24),
+              ),
+            ),
+            Container(
+              height: 400,
+              child: GridView.extent(
+                maxCrossAxisExtent: 300,
+                children: <Widget>[
+                  Image.asset("lib/Assets/pdf.png"),
+                  Image.asset("lib/Assets/pdf.png"),
+                  Image.asset("lib/Assets/pdf.png"),
+                  Image.asset("lib/Assets/pdf.png"),
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
     );
   }
 }
